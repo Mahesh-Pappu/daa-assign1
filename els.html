@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Els</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+        .dataset-section {
+            max-width: 800px;
+            margin: auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        .dataset-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .dataset-table th, .dataset-table td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+        .dataset-table th {
+            background-color: #444;
+        }
+        .histogram {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .info {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="chiba.html">Chiba</a>
+        <a href="els.html">Els</a>
+        <a href="tomita.html">Tomita</a>
+    </div>
+    
+    <div class="content">
+        <div class="dataset-section">
+            <h1>ELS</h1>
+            <h2>Dataset Information</h2>
+            <table class="dataset-table">
+                <tr>
+                    <th>Dataset</th>
+                    <th>Nodes</th>
+                    <th>Edges</th>
+                </tr>
+                <tr>
+                    <td>as-skitter</td>
+                    <td>1,696,415</td>
+                    <td>11,095,298</td>
+                </tr>
+                <tr>
+                    <td>Email-Enron</td>
+                    <td>36,692</td>
+                    <td>367,662</td>
+                </tr>
+                <tr>
+                    <td>Wiki-Vote</td>
+                    <td>7,115</td>
+                    <td>103,689</td>
+                </tr>
+            </table>
+
+            <h2>Maximal Cliques Information</h2>
+            <p>Here are the count of Maximal Cliques, size of  maximal clique and  time taken for execution on each dataset.</p>
+
+            <h2>Email-Enron Clique Size Distribution</h2>
+            <table class="dataset-table">
+                <tr>
+                    <th>Clique Size</th>
+                    <th>Count</th>
+                </tr>
+                <tr><td>2</td><td>14,070</td></tr>
+                <tr><td>3</td><td>7,077</td></tr>
+                <tr><td>4</td><td>13,319</td></tr>
+                <tr><td>5</td><td>18,143</td></tr>
+                <tr><td>6</td><td>22,715</td></tr>
+                <tr><td>7</td><td>25,896</td></tr>
+                <tr><td>8</td><td>24,766</td></tr>
+                <tr><td>9</td><td>22,884</td></tr>
+                <tr><td>10</td><td>21,393</td></tr>
+                <tr><td>11</td><td>17,833</td></tr>
+                <tr><td>12</td><td>15,181</td></tr>
+                <tr><td>13</td><td>11,487</td></tr>
+                <tr><td>14</td><td>7,417</td></tr>
+                <tr><td>15</td><td>3,157</td></tr>
+                <tr><td>16</td><td>1,178</td></tr>
+                <tr><td>17</td><td>286</td></tr>
+                <tr><td>18</td><td>41</td></tr>
+                <tr><td>19</td><td>10</td></tr>
+                <tr><td>20</td><td>6</td></tr>
+            </table>
+
+            <h2>Histogram</h2>
+            <img src="./ELS-Email-Enron-res.jpg" alt="Histogram" class="histogram">
+
+            <div class="info">
+                <p><strong>Time taken:</strong> 5991 milliseconds</p>
+                <p><strong>Number of cliques:</strong> 226,859</p>
+                <p><strong>Size of the largest maximal clique:</strong> 20</p>
+            </div>
+
+            <h2>Wiki-Vote Clique Size Distribution</h2>
+            <table class="dataset-table">
+                <tr>
+                    <th>Clique Size</th>
+                    <th>Count</th>
+                </tr>
+                <tr><td>2</td><td>8,655</td></tr>
+                <tr><td>3</td><td>13,718</td></tr>
+                <tr><td>4</td><td>27,292</td></tr>
+                <tr><td>5</td><td>48,416</td></tr>
+                <tr><td>6</td><td>68,872</td></tr>
+                <tr><td>7</td><td>83,266</td></tr>
+                <tr><td>8</td><td>76,732</td></tr>
+                <tr><td>9</td><td>54,456</td></tr>
+                <tr><td>10</td><td>35,470</td></tr>
+                <tr><td>11</td><td>21,736</td></tr>
+                <tr><td>12</td><td>11,640</td></tr>
+                <tr><td>13</td><td>5,449</td></tr>
+                <tr><td>14</td><td>2,329</td></tr>
+                <tr><td>15</td><td>740</td></tr>
+                <tr><td>16</td><td>208</td></tr>
+                <tr><td>17</td><td>23</td></tr>
+            </table>
+
+            <h2>Wiki-Vote Histogram</h2>
+            <img src="./ELS-Wiki-Vote-res.jpg" alt="Histogram" class="histogram">
+
+            <div class="info">
+                <p><strong>Time taken:</strong> 6,133 milliseconds (~6.13 seconds)</p>
+                <p><strong>Number of cliques:</strong> 459,002</p>
+                <p><strong>Size of the largest maximal clique:</strong> 17</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>
